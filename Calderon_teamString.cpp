@@ -8,7 +8,7 @@
 #include<string>
 using namespace std;
 string initials(string strA);
-
+int countAlpha(string strA);
 
 int main()
 {
@@ -19,7 +19,9 @@ assert(initials("daniel calderon manriquez")=="dcm");
 assert(initials("Potato Fancy Bottom Silver John")=="PFBSJ");
 
 //************Second Function********************************************
-
+assert(countAlpha("Potato")==6);
+assert(countAlpha("D4an56ny")==5);
+assert(countAlpha("B4acon")==5);
 
 return 0;
 }
@@ -42,7 +44,24 @@ string a,b,e;
     }
 return b;
 }
+int countAlpha(string strA)
+{
+int count=0;
+for (int i =0; i < strA.length(); i++)
+{
+    if((strA[i]>='A'&&strA[i]<='Z') || (strA[i]>='a'&&strA[i]<='z'))
+    {
+        count +=1;
+       
+    }
+    else
+    {
+    count =count;
+    }
+}
+return count;
 
+}
 
 
 
