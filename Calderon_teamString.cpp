@@ -9,22 +9,25 @@
 using namespace std;
 string initials(string strA);
 int countAlpha(string strA);
-
+int countWords(string strA);
 int main()
 {
 //************First Function*****************************************
-
 assert(initials("Daniel Calderon Manriquez")=="DCM");
 assert(initials("daniel calderon manriquez")=="dcm");
 assert(initials("Potato Fancy Bottom Silver John")=="PFBSJ");
-
 //************Second Function********************************************
 assert(countAlpha("Potato")==6);
 assert(countAlpha("D4an56ny")==5);
 assert(countAlpha("B4acon")==5);
+//************Third Function**************************************************
+assert(countWords("My name is daniel calderon led")==6);
+assert(countWords("BaconPotatoChili")==1);
+assert(countWords("Coleslaw Potato Salad Meat Loaf")==5);
 
 return 0;
 }
+//*********************************First Function************************************
 string initials(string strA)
 {
 int c;
@@ -44,6 +47,7 @@ string a,b,e;
     }
 return b;
 }
+//**************************Second Function***************************************
 int countAlpha(string strA)
 {
 int count=0;
@@ -61,6 +65,23 @@ for (int i =0; i < strA.length(); i++)
 }
 return count;
 
+}
+//************************Third Function*************************************
+int countWords(string strA)
+{
+int count=0;
+for(int i=0; i < strA.length();i++)
+{
+    if (strA[i]==' ')
+    {
+        count+=1;
+    }
+    else
+    {
+    count = count;
+    }
+}
+return count +1;
 }
 
 
