@@ -21,6 +21,7 @@ int main()
     assert(initials("Daniel Calderon Manriquez")=="DCM");
     assert(initials("daniel calderon manriquez")=="dcm");
     assert(initials("Potato Fancy Bottom Silver John")=="PFBSJ");
+    assert(initials("Maria Sera Turing")=="MST");
 //************Second Function********************************************
     assert(countAlpha("Potato")==6);
     assert(countAlpha("D4an56ny")==5);
